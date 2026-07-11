@@ -5,6 +5,6 @@ export type AuthIdentity = {
   userId: string;
 };
 
-export type AuthenticatedRequest = Request & {
+export interface AuthenticatedRequest extends Request {
   auth: AuthIdentity;
-};
+}
