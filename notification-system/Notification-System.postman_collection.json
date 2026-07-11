@@ -1,0 +1,95 @@
+{
+  "info": {
+    "name": "Tenant-Aware Notification System",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    { "key": "baseUrl", "value": "http://localhost:4000" },
+    { "key": "tenantId", "value": "t1" },
+    { "key": "userId", "value": "u1" }
+  ],
+  "auth": { "type": "noauth" },
+  "item": [
+    {
+      "name": "List notifications",
+      "request": {
+        "method": "GET",
+        "header": [
+          { "key": "X-Tenant-Id", "value": "{{tenantId}}" },
+          { "key": "X-User-Id", "value": "{{userId}}" }
+        ],
+        "url": "{{baseUrl}}/notifications?page=1&pageSize=10"
+      }
+    },
+    {
+      "name": "Unread count",
+      "request": {
+        "method": "GET",
+        "header": [
+          { "key": "X-Tenant-Id", "value": "{{tenantId}}" },
+          { "key": "X-User-Id", "value": "{{userId}}" }
+        ],
+        "url": "{{baseUrl}}/notifications/unread-count"
+      }
+    },
+    {
+      "name": "Mark one read",
+      "request": {
+        "method": "PATCH",
+        "header": [
+          { "key": "X-Tenant-Id", "value": "{{tenantId}}" },
+          { "key": "X-User-Id", "value": "{{userId}}" }
+        ],
+        "url": "{{baseUrl}}/notifications/n1/read"
+      }
+    },
+    {
+      "name": "Mark all read",
+      "request": {
+        "method": "PATCH",
+        "header": [
+          { "key": "X-Tenant-Id", "value": "{{tenantId}}" },
+          { "key": "X-User-Id", "value": "{{userId}}" }
+        ],
+        "url": "{{baseUrl}}/notifications/read-all"
+      }
+    },
+    {
+      "name": "Trigger member invited",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" },
+          { "key": "X-Tenant-Id", "value": "{{tenantId}}" },
+          { "key": "X-User-Id", "value": "{{userId}}" }
+        ],
+        "body": { "mode": "raw", "raw": "{\n  \"memberName\": \"Aarav\",\n  \"agencyName\": \"Nova Talent\"\n}" },
+        "url": "{{baseUrl}}/demo/member-invited"
+      }
+    },
+    {
+      "name": "Trigger creator replied",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" },
+          { "key": "X-Tenant-Id", "value": "{{tenantId}}" },
+          { "key": "X-User-Id", "value": "{{userId}}" }
+        ],
+        "body": { "mode": "raw", "raw": "{\n  \"creatorName\": \"Meera Kapoor\",\n  \"assignedUserId\": \"u1\"\n}" },
+        "url": "{{baseUrl}}/demo/creator-replied"
+      }
+    },
+    {
+      "name": "Tenant isolation attack (expect 404)",
+      "request": {
+        "method": "PATCH",
+        "header": [
+          { "key": "X-Tenant-Id", "value": "t1" },
+          { "key": "X-User-Id", "value": "u1" }
+        ],
+        "url": "{{baseUrl}}/notifications/n4/read"
+      }
+    }
+  ]
+}
