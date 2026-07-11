@@ -117,7 +117,7 @@ The project includes everything needed to run the backend, frontend, database, a
 
 ---
 
-## Additional Documents
+## Additional Document
 
 The project also includes:
 
