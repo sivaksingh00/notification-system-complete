@@ -84,6 +84,16 @@ These events simulate how notifications would be generated inside a real CRM.
 
 ---
 
+## Live Demo
+
+The complete application is deployed and can be tested using the links below.
+
+- **Frontend:** [Open the live application](https://notification-system-complete.vercel.app)
+- **Backend health check:** [Check backend status](https://notification-system-api-rykw.onrender.com/health)
+- **Source code:** [View the GitHub repository](https://github.com/sivaksingh00/notification-system-complete)
+
+> The backend is hosted on Render's free tier, so the first request may take a short time while the service wakes up.
+
 ## Project Structure
 
 ```
