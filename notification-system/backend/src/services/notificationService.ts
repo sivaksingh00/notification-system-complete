@@ -11,7 +11,9 @@ export type CreateNotificationInput = {
   body: string;
 };
 
-export async function createNotification(input: CreateNotificationInput) {
+export async function createNotification(
+  input: CreateNotificationInput
+) {
   return prisma.notification.create({
     data: {
       id: input.id ?? randomUUID(),
@@ -32,7 +34,9 @@ export function visibleToUserWhere(
 ): Prisma.NotificationWhereInput {
   return {
     tenantId,
-    OR: [{ userId: null }, { userId }]
+    OR: [
+      { userId: null },
+      { userId }
+    ]
   };
 }
-
