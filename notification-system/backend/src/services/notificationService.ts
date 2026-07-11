@@ -1,4 +1,5 @@
 import { randomUUID } from 'node:crypto';
+import type { Prisma } from '@prisma/client';
 import { prisma } from '../db.js';
 
 export type CreateNotificationInput = {
@@ -25,9 +26,13 @@ export async function createNotification(input: CreateNotificationInput) {
   });
 }
 
-export function visibleToUserWhere(tenantId: string, userId: string) {
+export function visibleToUserWhere(
+  tenantId: string,
+  userId: string
+): Prisma.NotificationWhereInput {
   return {
     tenantId,
     OR: [{ userId: null }, { userId }]
-  } as const;
+  };
 }
+
