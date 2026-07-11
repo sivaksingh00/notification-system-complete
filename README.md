@@ -129,8 +129,8 @@ The project also includes:
 
 ## Team
 
-- **Sivak** – Full-stack development, architecture, backend, frontend, testing and documentation.
-- **Ayush** – Testing and project review.
+- **Sivak** – Full-stack development,backend, frontend.
+- **Ayush** – Testing and project review, architecture.
 - **Zasefa** – Validation and documentation review.
 - **Rishabh** – Testing and repository review.
 
