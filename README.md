@@ -1,30 +1,8 @@
- # Tenant-Aware Notification System
+# Tenant-Aware Notification System
 
-The complete source code is inside the notification-system folder.
+This repository contains my submission for the **Full-Stack Notification System Challenge**.
 
-## Open this folder to access:
-
-- Backend
-- Frontend
-- Automated tests
-- Integration write-up
-- README with setup instructions
-
-Project Structure:
-
-
-notification-system/
-├── backend
-├── frontend
-├── README.md
-├── INTEGRATION_WRITEUP.md
-├── MORE_TIME.md
-
-[10:19 PM, 7/11/2026] Saaa....nu....: # Tenant-Aware Notification System
-
-This repository contains my submission for the *Full-Stack Notification System Challenge*.
-
-The complete project is located inside the *notification-system* folder.
+The complete project is located inside the **notification-system** folder.
 
 ---
 
@@ -34,7 +12,7 @@ The goal of this challenge was to build a complete notification system similar t
 
 Instead of building only the frontend or only the backend, the idea was to implement the complete flow:
 
-
+```
 An event happens
         ↓
 A notification is created
@@ -44,9 +22,9 @@ It is stored in the database
 The correct user receives it
         ↓
 The user can mark it as read
+```
 
-
-The project also demonstrates *tenant isolation*, ensuring that one organization can never access another organization's notifications.
+The project also demonstrates **tenant isolation**, ensuring that one organization can never access another organization's notifications.
 
 ---
 
@@ -54,9 +32,9 @@ The project also demonstrates *tenant isolation*, ensuring that one organization
 
 The complete implementation can be found inside:
 
-
+```
 notification-system/
-
+```
 
 It contains:
 
@@ -99,8 +77,8 @@ It contains:
 
 To demonstrate the complete notification pipeline, two sample events have been implemented.
 
-- *Member Invited* → Creates a tenant-wide notification.
-- *Creator Replied* → Creates a notification for a specific user.
+- **Member Invited** → Creates a tenant-wide notification.
+- **Creator Replied** → Creates a notification for a specific user.
 
 These events simulate how notifications would be generated inside a real CRM.
 
@@ -108,7 +86,7 @@ These events simulate how notifications would be generated inside a real CRM.
 
 ## Project Structure
 
-
+```
 notification-system/
 │
 ├── backend/
@@ -117,13 +95,13 @@ notification-system/
 ├── INTEGRATION_WRITEUP.md
 ├── MORE_TIME.md
 └── POSTMAN_REQUESTS.md
-
+```
 
 ---
 
 ## How to Run
 
-Open the *notification-system* folder and follow the setup instructions provided in its README file.
+Open the **notification-system** folder and follow the setup instructions provided in its README file.
 
 The project includes everything needed to run the backend, frontend, database, and tests.
 
@@ -131,7 +109,7 @@ The project includes everything needed to run the backend, frontend, database, a
 
 ## Additional Documents
 
-The project also includes::
+The project also includes:
 
 - Integration write-up
 - Notes on future improvements
@@ -141,10 +119,10 @@ The project also includes::
 
 ## Team
 
-- *Sivak* – Full-stack development, architecture, backend, frontend, testing and documentation.
-- *Ayush* – Testing and project review.
-- *Zasefa* – Validation and documentation review.
-- *Rishabh* – Testing and repository review.
+- **Sivak** – Full-stack development, architecture, backend, frontend, testing and documentation.
+- **Ayush** – Testing and project review.
+- **Zasefa** – Validation and documentation review.
+- **Rishabh** – Testing and repository review.
 
 ---
 
