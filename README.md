@@ -131,7 +131,7 @@ The project includes everything needed to run the backend, frontend, database, a
 
 ## Additional Documents
 
-The project also includes:
+The project also includes::
 
 - Integration write-up
 - Notes on future improvements
